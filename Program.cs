@@ -4,7 +4,7 @@
 
 String[] myarray = { "world", "yes", "no", "Helou", "125", "25", "4567", "123" };  // Объявляем массив
 
-void arr(string[] arrString)  // метод вывода заданного массива на экран
+void Printarr(string[] arrString)  // метод вывода заданного массива на экран
 {
     for (int i = 0; i < arrString.Length; i++)
     {
@@ -13,7 +13,7 @@ void arr(string[] arrString)  // метод вывода заданного ма
 }
 
 
-arr(myarray);
+Printarr(myarray);
 Console.WriteLine();
 
 var ar = new string[myarray.Length];
@@ -27,5 +27,5 @@ foreach (var value in myarray)
         arSize++;
     }
 }
-arr(ar);
+Printarr(ar);
 Console.WriteLine();
