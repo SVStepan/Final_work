@@ -10,13 +10,15 @@
 # Решение:
 *Объявляем массив с названием* **myarray**
 
-String[] myarray = { "world", "yes", "no", "Helou", "125", "25", "4567", "123" };
+String[] myarray = { "world", "yes", "no", "Hello", "125", "25", "4567", "123" };
 
 *Cоздаем метод **arr** заданного массива на экран*
 
 void arr(string[] arrString) 
+
 {
     for (int i = 0; i < arrString.Length; i++)
+
     {
         Console.Write(arrString[i] + " ");
     }
@@ -25,20 +27,30 @@ void arr(string[] arrString)
 *Bыводим объявленный массив с помощью созданного метода*
 
 arr(myarray);
+
 Console.WriteLine();
 
 *Создаем новый массив, в который будем собирать каждый элемент*
 
-var ar = new string[myarray.Length];
+var ar = new string [myarray.Length];
+
 var arSize = 0;
 
+*С помощь цикла foreach перебираем каждые элемент массива - **myarray**.* Проверяем выполнение условия элемент массива - **myarray** имею
 foreach (var value in myarray)
+
+ *Проверяем выполнение условия каждого элемента массива - **myarray** имеющего количество символов меньше либо равна 3*
 {
     if (value.Length <= 3)
+
     {
         ar[arSize] = value;
         arSize++;
     }
 }
+
+*Выводим на эркран с помощью ранее созданного метода, массив с элементами у которых количество символов меньше либо равна 3*
 arr(ar);
-Console.WriteLine();
+
+# Результат:
+yes no 125 25 123
