@@ -28,3 +28,4 @@ foreach (var value in myarray)
     }
 }
 arr(ar);
+Console.WriteLine();
